@@ -24,12 +24,12 @@ module.exports = {
 
     server: {
         protocol: 'udp4',
-        host: '0.0.0.0',
+        host: false,
         port: 31239
     },
 
     api: {
-        host: '0.0.0.0',
+        host: false,
         port: 5388
     }
 };
