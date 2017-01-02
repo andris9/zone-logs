@@ -51,7 +51,7 @@ server((err, done) => {
             log.info('Process', 'Force closing...');
             return stopTimer = setTimeout(() => {
                 process.exit(code || 0);
-            }, 20);
+            }, 1000);
         }
         stopping = true;
         clearTimeout(stopTimer);
@@ -60,8 +60,8 @@ server((err, done) => {
             log.info('Process', 'Force closing...');
             stopTimer = setTimeout(() => {
                 process.exit(code || 0);
-            }, 20);
-        }, 3000);
+            }, 1000);
+        }, 10 * 1000);
         log.info('Process', 'Closing...');
         done(() => {
             log.info('Process', 'Server closed');

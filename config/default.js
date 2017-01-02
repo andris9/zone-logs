@@ -22,6 +22,8 @@ module.exports = {
         }
     },
 
+    retention: 2 * 60 * 1000,
+
     server: {
         protocol: 'udp4',
         host: false,

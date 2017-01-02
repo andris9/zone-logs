@@ -1,0 +1,13 @@
+[Unit]
+Description=Zone Mail Logger
+After=syslog.target network.target
+
+[Service]
+Environment="NODE_ENV=production"
+WorkingDirectory=/opt/zone-logs
+ExecStart=/usr/bin/node -max-old-space-size=2048 index.js
+Type=simple
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
