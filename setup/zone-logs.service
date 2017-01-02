@@ -3,6 +3,8 @@ Description=Zone Mail Logger
 After=syslog.target network.target
 
 [Service]
+User=zone-mta
+Group=zone-mta
 Environment="NODE_ENV=production"
 WorkingDirectory=/opt/zone-logs
 ExecStart=/usr/bin/node -max-old-space-size=2048 index.js
